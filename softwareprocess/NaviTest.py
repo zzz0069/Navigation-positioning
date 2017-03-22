@@ -1,5 +1,5 @@
 from unittest import TestCase
-from .. import dispatch as nav
+import dispatch as nav
 
 class NavigationTest(TestCase):
 
