@@ -48,23 +48,8 @@ class NavigationTest(TestCase):
     #       dispatch() -> {'error':'dictionary is missing'}
     # Happy path
     def test100_010_ShouldCalculateAltitude(self):
-        input = {
-            'observation': '30d1.5',
-            'height': '19.0',
-            'pressure': '1000',
-            'horizon': 'artificial',
-            'op': 'adjust',
-            'temperature': '85'
-        }
-        output = {
-            'altitude': '29d59.9',
-            'observation': '30d1.5',
-            'height': '19.0',
-            'pressure': '1000',
-            'horizon': 'artificial',
-            'op': 'adjust',
-            'temperature': '85'
-        }
+        input = { 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
+        output = {'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
         self.assertDictEqual(dp.dispatch(input), output)
     # Sad path
     def test100_910_ShouldReturnNoOpError(self):
