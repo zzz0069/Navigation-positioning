@@ -7,16 +7,17 @@ def dispatch(values=None):
     if(not(isinstance(values,dict))):
         return {'error': 'parameter is not a dictionary'}
     if (not('op' in values)):
-        return {'error': 'no op is specified'}
+        values['error'] = 'no op is specified'
+        return values
 
     if(values['op'] == 'adjust'):
         return adjust(values)
     elif(values['op'] == 'predict'):
-        return values
+        return predict(values)
     elif(values['op'] == 'correct'):
-        return values
+        return correct(values)
     elif(values['op'] == 'locate'):
-        return values
+        return locate(values)
     else:
         values['error'] = 'op is not a legal operation'
         return values

@@ -1,3 +1,3 @@
 import dispatch as dispatch
-a = dispatch.dispatch({'op': 'predict'})
+a = dispatch.dispatch(42)
 print a
