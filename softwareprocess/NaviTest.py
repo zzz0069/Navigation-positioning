@@ -22,7 +22,7 @@ class NavigationTest(TestCase):
             'temperature': '85'
         }
         self.assertDictEqual(nav.dispatch(input), output)
-        
+
     def test100_910_ShouldReturnNoOpError(self):
         input = {}
         output = {'error': 'no op is specified'}
@@ -142,4 +142,3 @@ class NavigationTest(TestCase):
         input = {
             ''
         }
-
