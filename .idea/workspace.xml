@@ -40,8 +40,8 @@
       <file leaf-file-name="NaviTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/NaviTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="31" column="125" lean-forward="false" selection-start-line="31" selection-start-column="125" selection-end-line="31" selection-end-column="125" />
+            <state relative-caret-position="297">
+              <caret line="65" column="132" lean-forward="false" selection-start-line="65" selection-start-column="132" selection-end-line="65" selection-end-column="132" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -464,14 +464,14 @@
     <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 46m 08s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 49m 20s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
     <history-entry file="Unittest_NavigationTest_test100_010_ShouldCalculateAltitude - 2017.03.22 at 11h 28m 00s.xml">
       <configuration name="Unittest NavigationTest.test100_010_ShouldCalculateAltitude" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittest_NavigationTest_test100_010_ShouldCalculateAltitude - 2017.03.22 at 14h 32m 09s.xml">
       <configuration name="Unittest NavigationTest.test100_010_ShouldCalculateAltitude" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_NaviTest - 2017.03.21 at 23h 55m 35s.xml">
-      <configuration name="Unittests in NaviTest" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -676,8 +676,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/NaviTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="31" column="125" lean-forward="false" selection-start-line="31" selection-start-column="125" selection-end-line="31" selection-end-column="125" />
+        <state relative-caret-position="297">
+          <caret line="65" column="132" lean-forward="false" selection-start-line="65" selection-start-column="132" selection-end-line="65" selection-end-column="132" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
