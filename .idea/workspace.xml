@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5dc7750-a5d9-49d0-9cad-25126710ac9a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/NaviTest.py" afterPath="$PROJECT_DIR$/test/NaviTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/dispatch.py" afterPath="$PROJECT_DIR$/softwareprocess/dispatch.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="243">
+              <caret line="96" column="46" lean-forward="false" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -59,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SampleTest.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SampleTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/SampleTest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-6308">
@@ -113,9 +113,9 @@
         <option value="$PROJECT_DIR$/test/SampleTest.py" />
         <option value="$PROJECT_DIR$/dispatch.py" />
         <option value="$PROJECT_DIR$/softwareprocess/NaviTest.py" />
-        <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
         <option value="$PROJECT_DIR$/softwareprocess/main dispatch.py" />
         <option value="$PROJECT_DIR$/test/NaviTest.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
       </list>
     </option>
   </component>
@@ -498,6 +498,9 @@
     <history-entry file="All_Tests_(TDD) - 2017.03.21 at 21h 57m 37s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.21 at 22h 28m 55s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
     <history-entry file="Unittests_in_NaviTest - 2017.03.21 at 21h 01m 17s.xml">
       <configuration name="Unittests in NaviTest" configurationId="tests" />
     </history-entry>
@@ -513,12 +516,9 @@
     <history-entry file="Unittests_in_NavigationTest - 2017.03.21 at 21h 07m 26s.xml">
       <configuration name="Unittests in NavigationTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_SampleTest - 2017.03.21 at 21h 00m 33s.xml">
-      <configuration name="Unittests in SampleTest" configurationId="tests" />
-    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17815483" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -644,14 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/Sample.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -660,10 +652,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/main dispatch.py">
+    <entry file="file://$PROJECT_DIR$/test/SampleTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="-6308">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -678,10 +670,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/SampleTest.py">
+    <entry file="file://$PROJECT_DIR$/softwareprocess/main dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6308">
-          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="22" />
+        <state relative-caret-position="81">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="96" column="46" lean-forward="false" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
           <folding />
         </state>
       </provider>

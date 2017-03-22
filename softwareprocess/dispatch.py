@@ -43,7 +43,6 @@ def adjust(values):
         values['error'] = 'observation is invalid'
         return values
     if minutesStr[::-1].find('.') is not 1:
-        # minutes must be a float with a mandatory decimal [0.0, 60.0)
         values['error'] = 'observation is invalid'
         return values
     if minutes < 0.0 or minutes >= 60.0:
@@ -52,7 +51,7 @@ def adjust(values):
     if degrees == 0 and minutes == 0.1:
         values['error'] = 'observation is invalid'
         return values
-    totalDegrees = degrees + minutes / 60.0
+    convertDegree = degrees + minutes / 60.0
 
     height = 0
     if 'height' in values:
@@ -91,13 +90,13 @@ def adjust(values):
     if 'horizon' in values:
         if horizon != 'artificial' and horizon != 'natural':
             values['error'] = 'horizon is invalid'
-            return values
+        return values
 
     dip = 0
     if horizon == 'natural':
-        dip = (-0.97 * math.sqrt(height)) / 60.0
-    refraction=(-0.00452*pressure) / (273+convertToCelsius(temperature))/math.tan(totalDegrees)
-    altitude = totalDegrees + dip + refraction
+        dip = (-0.97 * math.sqrt(height)) / 60
+    refraction=(-0.00452*pressure) / (273+convertToCelsius(temperature))/math.tan(convertDegree)
+    altitude = convertDegree + dip + refraction
     if altitude < 0 or altitude > 90:
         values['error'] = 'altitude is invalid'
         return values
