@@ -5,7 +5,7 @@ class NavigationTest(TestCase):
 
     def test100_010_ShouldCalculateAltitude(self):
         input = { 'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'temperature': '72'}
-        output = { 'error': 'no op is specified', 'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'temperature': '72'}
+        output = {'temperature': '72', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'error': 'no op is specified', 'observation': '15d04.9'}
         self.assertDictEqual(dp.dispatch(input), output)
 
     def test100_910_ShouldReturnNoOpError(self):
