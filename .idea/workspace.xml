@@ -18,8 +18,8 @@
       <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2055">
-              <caret line="100" column="1" lean-forward="false" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+            <state relative-caret-position="999">
+              <caret line="37" column="32" lean-forward="false" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -38,8 +38,8 @@
       <file leaf-file-name="NaviTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/NaviTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+            <state relative-caret-position="81">
+              <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -69,8 +69,8 @@
         <option value="$PROJECT_DIR$/test/SampleTest.py" />
         <option value="$PROJECT_DIR$/dispatch.py" />
         <option value="$PROJECT_DIR$/softwareprocess/NaviTest.py" />
-        <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
         <option value="$PROJECT_DIR$/softwareprocess/main dispatch.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
         <option value="$PROJECT_DIR$/test/NaviTest.py" />
       </list>
     </option>
@@ -149,7 +149,7 @@
       <recent name="C:\Users\yymjz\PycharmProjects\CSSE\softwareprocess" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main dispatch">
+  <component name="RunManager" selected="Python.dispatch">
     <configuration default="false" name="main dispatch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -429,9 +429,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.main dispatch" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest NavigationTest.test100_010_ShouldCalculateAltitude" />
-        <item index="2" class="java.lang.String" itemvalue="Python.dispatch" />
+        <item index="0" class="java.lang.String" itemvalue="Python.dispatch" />
+        <item index="1" class="java.lang.String" itemvalue="Python.main dispatch" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest NavigationTest.test100_010_ShouldCalculateAltitude" />
         <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest NavigationTest.test100_930_ShouldReturnErrorIfInputIsNotDict" />
         <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in NaviTest" />
       </list>
@@ -441,35 +441,35 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 11h 28m 04s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 15h 10m 32s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 11h 29m 08s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 15h 11m 44s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 33m 01s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 15h 11m 52s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 33m 32s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 15h 11m 56s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 44m 28s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 15h 12m 22s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 46m 08s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 15h 12m 25s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 49m 20s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 15h 15m 26s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 57m 17s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 15h 18m 13s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_NavigationTest_test100_010_ShouldCalculateAltitude - 2017.03.22 at 11h 28m 00s.xml">
-      <configuration name="Unittest NavigationTest.test100_010_ShouldCalculateAltitude" configurationId="tests" />
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 15h 18m 39s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_NavigationTest_test100_010_ShouldCalculateAltitude - 2017.03.22 at 14h 32m 09s.xml">
-      <configuration name="Unittest NavigationTest.test100_010_ShouldCalculateAltitude" configurationId="tests" />
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 15h 18m 44s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -656,14 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2055">
-          <caret line="100" column="1" lean-forward="false" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/main dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -672,10 +664,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="999">
+          <caret line="37" column="32" lean-forward="false" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/NaviTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        <state relative-caret-position="81">
+          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
