@@ -32,17 +32,17 @@ def adjust(values):
         values['error'] = 'mandatory information is missing'
         return {'error':'mandatory information is missing'}
     try:
-        degreesAndMinutes = values['observation'].split('d')
-        degrees = int(degreesAndMinutes[0])
-        minutesStr = degreesAndMinutes[1]
-        minutes = float(minutesStr)
+        degreesMinutes = values['observation'].split('d')
+        degrees = int(degreesMinutes[0])
+        minutesStringType = degreesMinutes[1]
+        minutes = float(minutesStringType)
     except:
         values['error'] = 'observation is invalid'
         return values
     if degrees < 0 or degrees >= 90:
         values['error'] = 'observation is invalid'
         return values
-    if minutesStr[::-1].find('.') is not 1:
+    if minutesStringType[::-1].find('.') is not 1:
         values['error'] = 'observation is invalid'
         return values
     if minutes < 0.0 or minutes >= 60.0:
