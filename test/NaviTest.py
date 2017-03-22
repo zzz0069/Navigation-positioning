@@ -66,9 +66,3 @@ class NavigationTest(TestCase):
         input = {'observation': '45d15.2', 'height': '6', 'horizon': '   ', 'pressure': '1010', 'op': 'adjust', 'temperature': '71'}
         output = {'observation': '45d15.2', 'height': '6', 'horizon': '   ', 'pressure': '1010', 'op': 'adjust', 'temperature': '71', 'error':'horizon is invalid'}
         self.assertDictEqual(dp.dispatch(input), output)
-
-    def test200_030_ShouldReturnCalcuatedAltitude(self):
-        input = {'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
-        expected = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
-        self.assertDictEqual(dp.adjust(input), expected)
-
