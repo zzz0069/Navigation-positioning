@@ -52,7 +52,7 @@ def adjust(values):
         values['error'] = 'observation is invalid'
         return values
     observation = degrees + minutes / 60.0
-
+ #   print observation
     height = 0
     if 'height' in values:
         try:
@@ -63,7 +63,7 @@ def adjust(values):
         if values['height'] < 0:
             values['error'] = 'height is invalid'
             return values
-
+ #   print height
     temperature = 72
     if 'temperature' in values:
         try:
@@ -74,7 +74,7 @@ def adjust(values):
         if temperature < -20 or temperature > 120:
             values['error'] = 'temperature is invalid'
             return values
-
+ #   print temperature
     pressure = 1010
     if 'pressure' in values:
         try:
@@ -85,17 +85,20 @@ def adjust(values):
         if pressure < 100 or pressure > 1100:
             values['error'] = 'pressure is invalid'
             return values
-
+  #  print pressure
     horizon = 'natural'
     if 'horizon' in values:
+        horizon = values['horizon']
         if horizon != 'artificial' and horizon != 'natural':
             values['error'] = 'horizon is invalid'
-        return values
-
+            return values
+#    print horizon
     dip = 0
     if horizon == 'natural':
         dip = (-0.97 * math.sqrt(height)) / 60
-    refraction=(-0.00452*pressure) / (273+convertToCelsius(temperature))/math.tan(observation)
+#  print dip
+    refraction=(-0.00452*pressure) / (273+convertToCelsius(temperature))/math.tan(math.radians(observation))
+#    print refraction
     altitude = observation + dip + refraction
     if altitude < 0 or altitude > 90:
         values['error'] = 'altitude is invalid'
@@ -106,7 +109,7 @@ def adjust(values):
 def correctedAltitude(alt):
     x = ((alt - math.floor(alt)) * 60.0)
     arcmin = round(x,1)
-    return str(math.floor(alt) + 'd' + arcmin)
+    return str(int(math.floor(alt))) + 'd' + str(arcmin)
 
 def convertToCelsius(f):
     c = (f - 32) * 5.0/9.0

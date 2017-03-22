@@ -5,7 +5,7 @@ class NavigationTest(TestCase):
 
     def test100_010_ShouldCalculateAltitude(self):
         input = { 'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'temperature': '72'}
-        output = {'temperature': '72', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'error': 'no op is specified', 'observation': '15d04.9'}
+        output = {'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'temperature': '72', 'error':'no op is specified'}
         self.assertDictEqual(dp.dispatch(input), output)
 
     def test100_910_ShouldReturnNoOpError(self):
@@ -18,17 +18,9 @@ class NavigationTest(TestCase):
         output = {'error':'parameter is not a dictionary'}
         self.assertDictEqual(dp.dispatch(input), output)
 
-    def test100_920_ShouldReturnNoOpError(self):
-        input = { 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
-        output = {'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
-        self.assertDictEqual(dp.dispatch(input), output)
-
     def test100_940_ShouldReturnIllegalOpError(self):
         input = {'op': 'unknown'}
-        output = {
-            'op': 'unknown',
-            'error':'op is not a legal operation'
-        }
+        output = { 'op': 'unknown', 'error':'op is not a legal operation'}
         self.assertDictEqual(dp.dispatch(input), output)
 
     def test100_950_ShouldReturnDictMissingError(self):
