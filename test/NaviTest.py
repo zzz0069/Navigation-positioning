@@ -25,7 +25,7 @@ class NavigationTest(TestCase):
 
     def test100_050_ShouldReturnAltitude(self):
         input = {'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
-        expected = {'altitude':'45d11.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
+        expected = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
         self.assertDictEqual(dp.adjust(input), expected)
 
     def test100_910_ShouldReturnNoOpError(self):
