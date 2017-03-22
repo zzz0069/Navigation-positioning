@@ -52,7 +52,7 @@ class NavigationTest(unittest.TestCase):
 
     def test100_960_ShouldReturnError(self):
         input = {'op': 'adjust'}
-        output = {'error':'mandatory information is missing'}
+        output = {'op': 'adjust','error':'mandatory information is missing'}
         self.assertDictEqual(dp.dispatch(input), output)
 
     def test100_970_ShouldReturnError(self):
