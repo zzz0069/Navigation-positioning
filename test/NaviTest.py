@@ -72,37 +72,3 @@ class NavigationTest(TestCase):
         expected = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
         self.assertDictEqual(dp.adjust(input), expected)
 
-    def test200_910_ShouldReturnMandatoryElemMissingError(self):
-        input = {'op': 'adjust'}
-        expected = {'op': 'adjust', 'error':'mandatory information is missing'}
-        self.assertDictEqual(dp.adjust(input), expected)
-
-    def test200_920_ShouldReturnInvalidObservationError(self):
-        input = {'observation': '101d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
-        expected = {'observation': '101d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71', 'error':'observation is invalid'}
-        self.assertDictEqual(dp.adjust(input), expected)
-
-    def test200_910_ShouldReturnInvalidHeightError(self):
-        input = {'observation': '45d15.2', 'height': 'a', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
-        expected = {'observation': '45d15.2', 'height': 'a', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71', 'error':'height is invalid'}
-        self.assertDictEqual(dp.adjust(input), expected)
-
-    def test200_920_ShouldReturnInvalidHorizonError(self):
-        input = {'observation': '45d15.2', 'height': '6', 'horizon': '   ', 'pressure': '1010', 'op': 'adjust', 'temperature': '71'}
-        expected = {'observation': '45d15.2', 'height': '6', 'horizon': '   ', 'pressure': '1010', 'op': 'adjust', 'temperature': '71', 'error':'horizon is invalid'}
-        self.assertDictEqual(dp.adjust(input), expected)
-
-    def test200_930_ShouldReturnInvalidHorizonError(self):
-        input = {'observation': '45d15.2', 'height': '6', 'horizon': 2, 'pressure': '1010', 'op': 'adjust', 'temperature': '71'}
-        expected = {'observation': '45d15.2', 'height': '6', 'horizon': 2, 'pressure': '1010', 'op': 'adjust', 'temperature': '71', 'error':'horizon is invalid'}
-        self.assertDictEqual(dp.adjust(input), expected)
-
-    def shouldReturnErrorIfAltitudeExists(self):
-        input = {'altitude': 'something'}
-        expected = {'altitude': 'something', 'error': 'altitude already exists in the input'}
-        actual = dp.adjust(input)
-        self.assertDictEqual(expected, actual)
-
-    def shouldReturnErrorIfObservationDoesNotExist(self):
-        input = { ''}
-
