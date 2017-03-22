@@ -30,7 +30,7 @@ def adjust(values):
 
     if 'observation' not in values:
         values['error'] = 'mandatory information is missing'
-        return {'error':'mandatory information is missing'}
+        return values
     try:
         degreesMinutes = values['observation'].split('d')
         degrees = int(degreesMinutes[0])
