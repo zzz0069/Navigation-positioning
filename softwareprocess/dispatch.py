@@ -112,8 +112,8 @@ def convertToCelsius(f):
     c = (f - 32) * 5.0/9.0
     return c
 
-def transToDegrees(min):
-    return min / 60.0
+#def transToDegrees(min):
+   # return min / 60.0
 
 def predict(values):
     return values
