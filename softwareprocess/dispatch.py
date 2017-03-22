@@ -51,7 +51,7 @@ def adjust(values):
     if degrees == 0 and minutes == 0.1:
         values['error'] = 'observation is invalid'
         return values
-    convertDegree = degrees + minutes / 60.0
+    observation = degrees + minutes / 60.0
 
     height = 0
     if 'height' in values:
@@ -95,20 +95,18 @@ def adjust(values):
     dip = 0
     if horizon == 'natural':
         dip = (-0.97 * math.sqrt(height)) / 60
-    refraction=(-0.00452*pressure) / (273+convertToCelsius(temperature))/math.tan(convertDegree)
-    altitude = convertDegree + dip + refraction
+    refraction=(-0.00452*pressure) / (273+convertToCelsius(temperature))/math.tan(observation)
+    altitude = observation + dip + refraction
     if altitude < 0 or altitude > 90:
         values['error'] = 'altitude is invalid'
         return values
-    #values['altitude'] = altitude
-    values['altitude'] = formatAlt(altitude)
+    values['altitude'] = correctedAltitude(altitude)
     return values
 
-def formatAlt(alt):
+def correctedAltitude(alt):
     x = ((alt - math.floor(alt)) * 60.0)
     arcmin = round(x,1)
-    return arcmin
-    #return '%dd%.1f' % (math.floor(alt), arcmin)
+    return '%dd%.1f' % (math.floor(alt), arcmin)
 
 def convertToCelsius(f):
     c = (f - 32) * 5.0/9.0
