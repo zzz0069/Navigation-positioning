@@ -106,7 +106,7 @@ def adjust(values):
 def correctedAltitude(alt):
     x = ((alt - math.floor(alt)) * 60.0)
     arcmin = round(x,1)
-    return '%dd%.1f' % (math.floor(alt), arcmin)
+    return '%dd%d'%(math.floor(alt), arcmin)
 
 def convertToCelsius(f):
     c = (f - 32) * 5.0/9.0
