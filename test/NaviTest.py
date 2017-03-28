@@ -69,3 +69,8 @@ class NavigationTest(unittest.TestCase):
         input = {'observation': '45d15.2', 'height': '6', 'horizon': '   ', 'pressure': '1010', 'op': 'adjust', 'temperature': '71'}
         output = {'observation': '45d15.2', 'height': '6', 'horizon': '   ', 'pressure': '1010', 'op': 'adjust', 'temperature': '71', 'error':'horizon is invalid'}
         self.assertDictEqual(dp.dispatch(input), output)
+
+    def test200_010_ShouldPredictLongAndLat(self):
+        input = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'}
+        output = {'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'temperature': '72', 'error':'no op is specified'}
+        self.assertDictEqual(dp.dispatch(input), output)
