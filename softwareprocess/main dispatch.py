@@ -1,6 +1,6 @@
 import unittest
 
-import dispatch as DP
+from softwareprocess import dispatch as DP
 
 class MyTestCase(unittest.TestCase):
     def setUp(self):
@@ -56,10 +56,10 @@ class MyTestCase(unittest.TestCase):
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
 
     def test100_920_ShouldReturnValuesWithoutErrorKeyWhenValuesHasDictionartyElementErrorAsKey(self):
-        values ={'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial',
-                 'temperature': '72', 'error': 'no op is specified'}
         expectedDictionary = {'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial',
                               'temperature': '72'}
+        values ={'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial',
+                 'temperature': '72', 'error': 'no op is specified'}
         self.assertDictEqual(DP.dispatch(values), expectedDictionary)
 
     def test100_930ShouldReturnValuesWithErrorWhenParameterIsNotADictionary(self):
