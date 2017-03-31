@@ -1,6 +1,6 @@
 import unittest
 
-import softwareprocess.prod.dispatch as DP
+import dispatch as DP
 
 class MyTestCase(unittest.TestCase):
     def setUp(self):
