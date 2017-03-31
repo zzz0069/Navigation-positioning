@@ -72,5 +72,25 @@ class NavigationTest(unittest.TestCase):
 
     def test200_010_ShouldPredictLongAndLat(self):
         input = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'}
-        output = {'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'temperature': '72', 'error':'no op is specified'}
+        output = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long':'75d53.6', 'lat':'7d24.3'}
+        self.assertDictEqual(dp.dispatch(input), output)
+
+    def test200_910_ShouldReturnError(self):
+        input = {'op': 'predict'}
+        output = {'error':'mandatory information is missing', 'op': 'predict'}
+        self.assertDictEqual(dp.dispatch(input), output)
+
+    def test200_920_ShouldReturnError(self):
+        input = {'op':'predict', 'body': 'unknown', 'date': '2016-01-17', 'time': '03:15:42'}
+        output = {'op':'predict', 'body': 'unknown', 'date': '2016-01-17', 'time': '03:15:42', 'error':'star not in catalog'}
+        self.assertDictEqual(dp.dispatch(input), output)
+
+    def test200_930_ShouldReturnError(self):
+        input = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-99-17', 'time': '03:15:42'}
+        output = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-99-17', 'time': '03:15:42', 'error':'invalid date'}
+        self.assertDictEqual(dp.dispatch(input), output)
+
+    def test200_940_ShouldReturnError(self):
+        input = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:99'}
+        output = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:99', 'error':'invalid time'}
         self.assertDictEqual(dp.dispatch(input), output)

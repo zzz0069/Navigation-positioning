@@ -116,7 +116,10 @@ def convertToCelsius(f):
     return c
 
 def predict(values):
-    return values
+    if 'body' not in values:
+        values['error'] = 'mandatory information is missing'
+        return values
+
 
 def correct(values):
     return values
