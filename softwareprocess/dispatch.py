@@ -133,10 +133,9 @@ import datetime
 
 def calculatePredict(values):
     # checking important information
-    key = 'body'
-    if key not in values:
+    if 'body' not in values:
         values['error'] = 'mandatory information is missing'
-        return values
+    return values
 
 
     # calculation of long and lat
