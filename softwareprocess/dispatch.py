@@ -118,18 +118,6 @@ def convertToCelsius(f):
     c = (f - 32) * 5.0/9.0
     return c
 
-#def predict(values):
- #   if 'body' not in values:
-  #      values['error'] = 'mandatory information is missing'
-   #     return values
-
-
-def correct(values):
-    return values
-
-def locate(values):
-    return values
-
 def predict(values):
     key = 'body'
     if key not in dict.keys(values):
@@ -275,3 +263,9 @@ def degreeToString(degree):
     minute = var1 + '.' + var2
     degree = str(int(degree)) + 'd' + minute
     return degree
+
+def correct(values):
+    return values
+
+def locate(values):
+    return values
