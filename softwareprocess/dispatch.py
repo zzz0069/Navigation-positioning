@@ -133,15 +133,15 @@ def locate(values):
 def predict(values):
     key = 'body'
     if key not in dict.keys(values):
-        values['error'] = 'mandatory information body missing'
-        return values
-    key = 'long'
-    if key in dict.keys(values):
-        values['error'] = 'input contains key long'
+        values['error'] = 'mandatory information is missing'
         return values
     key = 'lat'
     if key in dict.keys(values):
-        values['error'] = 'input contains key lat'
+        values['error'] = 'input contains key : lat'
+        return values
+    key = 'long'
+    if key in dict.keys(values):
+        values['error'] = 'input contains key : long'
         return values
 
 
