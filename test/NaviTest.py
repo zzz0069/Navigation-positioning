@@ -1,5 +1,5 @@
 import unittest
-from softwareprocess import dispatch as dp
+from softwareprocess import assignment5Predict as ap
 
 class NavigationTest(unittest.TestCase):
 
