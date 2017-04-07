@@ -138,6 +138,7 @@ def predict(values):
         word = line.split()
         starsDict[word[0]] = str(word[1]) + ' ' + str(word[2])
     data.close()
+
     starName = values['body']
     if (word[0].lower() == starName.lower()):
         return word
@@ -148,6 +149,7 @@ def predict(values):
     keys = ['long','lat']
     for key in dict.keys(values):
         keys.append(key)
+
     key = 'date'
     if key not in dict.keys(values):
         values[key] = '2001-01-01'
@@ -156,6 +158,7 @@ def predict(values):
         if dateValid == False:
             values['error'] = 'invalid date'
             return values
+
     key = 'time'
     if key not in dict.keys(values):
         values[key] = '00:00:00'
@@ -166,12 +169,12 @@ def predict(values):
             return values
 
 
-    starParameters = starsDict[starName]
-    starParameters = starParameters.split()
-    SHA = starParameters[0]
-    latitude = starParameters[1]
-    timeParameters = {'date' : values['date'], 'time' : values['time']}
-    GHAEarth = calculateGHA(timeParameters)
+    elementInStar = starsDict[starName]
+    elementInStar = elementInStar.split()
+    SHA = elementInStar[0]
+    latitude = elementInStar[1]
+    timePara = {'date' : values['date'], 'time' : values['time']}
+    GHAEarth = getGHA(timePara)
     GHAStar = degreeToFloat(GHAEarth) + degreeToFloat(SHA)
     GHAStar = GHAStar - math.floor(GHAStar / 360) * 360
     GHAStar = degreeToString(GHAStar)
@@ -213,11 +216,11 @@ def timeTest(values):
     if (int(time[0]) > 24 or int(time[0]) < 0) or (int(time[1]) > 60 or int(time[1]) < 0) or (int(time[2]) > 60 or int(time[2]) <0):
         return False
 
-def calculateGHA(timeParameters):
+def getGHA(timePara):
     originalGHA = '100d42.6'        # GHA in 2001-01-01
     originalGHA = degreeToFloat(originalGHA)
-    date = timeParameters['date']
-    time = timeParameters['time']
+    date = timePara['date']
+    time = timePara['time']
     year = int(date.split('-')[0])
     month = int(date.split('-')[1])
     day = int(date.split('-')[2])
@@ -232,8 +235,8 @@ def calculateGHA(timeParameters):
     dayGap = int(dayDiff.days)
     time = time.split(':')
     secGap = dayGap * 86400 + int(time[0]) * 3600 + int(time[1]) * 60 + int(time[2])
-    rotationInYear = (secGap - int(secGap / 86164.1) * 86164.1) / 86164.1 * degreeToFloat('360d00.0')
-    GHA = originalGHA + cumulativeProgression + totalProgression + rotationInYear
+    rotationInObsYear = (secGap - int(secGap / 86164.1) * 86164.1) / 86164.1 * degreeToFloat('360d00.0')
+    GHA = originalGHA + cumulativeProgression + totalProgression + rotationInObsYear
     GHA = degreeToString(GHA)
     return GHA
 
