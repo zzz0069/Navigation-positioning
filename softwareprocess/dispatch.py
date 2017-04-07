@@ -133,8 +133,7 @@ def predict(values):
         return values
 
 
-    data = xlrd.open_workbook('201720Assignment5.xls')
-    table = data.sheet_by_name("Stars")
+    data = open('Stars.txt')
     starsDict = {}
     for line in table:
         eachLine = line
