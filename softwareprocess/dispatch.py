@@ -136,8 +136,9 @@ def predict(values):
     data = open('Stars.txt')
     starsDict = {}
     for line in data:
-        eachLine = line.split()
-        starsDict[eachLine[0]] = str(eachLine[1]) + ' ' + str(eachLine[2])
+        word = line.split()
+    
+        starsDict[word[0]] = str(word[1]) + ' ' + str(word[2])
     data.close()
     starName = values['body']
     if starName not in starsDict:
@@ -172,7 +173,7 @@ def predict(values):
     timeParameters = {'date' : values['date'], 'time' : values['time']}
     GHAEarth = calculateGHA(timeParameters)
     GHAStar = degreeToFloat(GHAEarth) + degreeToFloat(SHA)
-    GHAStar = GHAStar - math.floor((GHAStar / 360) * 360)
+    GHAStar = GHAStar - math.floor(GHAStar / 360) * 360
     GHAStar = degreeToString(GHAStar)
     values['long'] = GHAStar
     values['lat'] = latitude
