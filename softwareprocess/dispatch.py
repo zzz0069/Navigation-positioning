@@ -146,13 +146,13 @@ def predict(values):
 
 
     data = xlrd.open_workbook('201720Assignment5.xls')
-    stars = open(data.sheets()[3])
+    table = open(data.sheet_by_name("Stars"))
     starsDict = {}
-    for line in stars:
+    for line in table:
         eachLine = line
         eachLine = eachLine.split()
         starsDict[eachLine[0]] = str(eachLine[1]) + ' ' + str(eachLine[2])
-    stars.close()
+    table.close()
     starName = values['body']
     if starName not in starsDict:
         values['error'] = 'star not in catalog'
