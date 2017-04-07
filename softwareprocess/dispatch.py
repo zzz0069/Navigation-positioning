@@ -266,9 +266,9 @@ def degreeToString(degree):
     if '-' in minute:
         minute = minute.replace('-', '')
     minute = minute.split('.')
-    var1 = minute[0].zfill(2)
-    var2 = minute[1]
-    minute = var1 + '.' + var2
+    min1 = minute[0].zfill(2)
+    min2 = minute[1]
+    minute = min1 + '.' + min2
     degree = str(int(degree)) + 'd' + minute
     return degree
 
