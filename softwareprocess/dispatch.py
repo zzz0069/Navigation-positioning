@@ -137,7 +137,8 @@ def predict(values):
     starsDict = {}
     for line in data:
         word = line.split()
-    
+        if (word[0].lower() == data.lower()):
+            return word
         starsDict[word[0]] = str(word[1]) + ' ' + str(word[2])
     data.close()
     starName = values['body']
