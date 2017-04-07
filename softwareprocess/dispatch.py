@@ -145,8 +145,8 @@ def calculatePredict(values):
         return values
 
 
-    fileName = data = xlrd.open_workbook('demo.xls')
-    stars = open(fileName)
+    fName = xlrd.open_workbook('201720Assignment5.xls')
+    stars = open(fName)
     starsDict = {}
     for line in stars:
         eachLine = line
@@ -154,11 +154,10 @@ def calculatePredict(values):
         starsDict[eachLine[0]] = str(eachLine[1]) + ' ' + str(eachLine[2])
     stars.close()
     starName = values['body']
-    if starName not in starsDict: # do a star name check
+    if starName not in starsDict:
         values['error'] = 'star not in catalog'
         return values
 
-    # setting default values
     keys = ['long','lat']
     for key in dict.keys(values):
         keys.append(key)
