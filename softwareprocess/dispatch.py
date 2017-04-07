@@ -1,4 +1,7 @@
 import math
+import re
+import datetime
+import xlrd
 
 def dispatch(values=None):
 
@@ -127,19 +130,22 @@ def correct(values):
 def locate(values):
     return values
 
-import re
-import os
-import datetime
-
 def calculatePredict(values):
-    # checking important information
-    if 'body' not in values:
-        values['error'] = 'mandatory information is missing'
-    return values
+    key = 'body'
+    if key not in dict.keys(values):
+        values['error'] = 'mandatory information body missing'
+        return values
+    key = 'long'
+    if key in dict.keys(values):
+        values['error'] = 'input contains key long'
+        return values
+    key = 'lat'
+    if key in dict.keys(values):
+        values['error'] = 'input contains key lat'
+        return values
 
 
-    # calculation of long and lat
-    fileName = os.path.join(os.path.dirname(__file__), 'stars.txt')
+    fileName = data = xlrd.open_workbook('demo.xls')
     stars = open(fileName)
     starsDict = {}
     for line in stars:
