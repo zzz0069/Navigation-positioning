@@ -135,7 +135,7 @@ def predict(values):
 
     data = open('Stars.txt')
     starsDict = {}
-    for line in table:
+    for line in data:
         eachLine = line
         eachLine = eachLine.split()
         starsDict[eachLine[0]] = str(eachLine[1]) + ' ' + str(eachLine[2])
