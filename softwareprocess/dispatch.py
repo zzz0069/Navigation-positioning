@@ -130,7 +130,7 @@ def correct(values):
 def locate(values):
     return values
 
-def calculatePredict(values):
+def predict(values):
     key = 'body'
     if key not in dict.keys(values):
         values['error'] = 'mandatory information body missing'
