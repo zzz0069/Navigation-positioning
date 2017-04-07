@@ -172,9 +172,11 @@ def predict(values):
     SHA = starParameters[0]
     latitude = starParameters[1]
     timeParameters = {'date' : values['date'], 'time' : values['time']}
-    earthGHA = calculateGHA(timeParameters)
-    GHAStar = degreeToFloat(earthGHA) + degreeToFloat(SHA)
+    GHAEarth = calculateGHA(timeParameters)
+    GHAStar = degreeToFloat(GHAEarth) + degreeToFloat(SHA)
+    print GHAStar
     GHAStar = GHAStar - (int(GHAStar / 360) * 360)
+    print GHAStar
     GHAStar = degreeToString(GHAStar)
     values['long'] = GHAStar
     values['lat'] = latitude
