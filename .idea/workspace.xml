@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5dc7750-a5d9-49d0-9cad-25126710ac9a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/201720Assignment5.xls" afterPath="$PROJECT_DIR$/softwareprocess/201720Assignment5.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/dispatch.py" afterPath="$PROJECT_DIR$/softwareprocess/dispatch.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/main dispatch.py" afterPath="$PROJECT_DIR$/softwareprocess/main dispatch.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3957">
-              <caret line="271" column="0" lean-forward="true" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
+            <state relative-caret-position="1810">
+              <caret line="235" column="41" lean-forward="false" selection-start-line="235" selection-start-column="41" selection-end-line="235" selection-end-column="41" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -39,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main dispatch.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main dispatch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/main dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="81">
+              <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -52,8 +54,8 @@
       <file leaf-file-name="NaviTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/NaviTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="78" column="33" lean-forward="true" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="33" />
+            <state relative-caret-position="189">
+              <caret line="73" column="33" lean-forward="false" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -86,10 +88,10 @@
         <option value="$USER_HOME$/Google drive/COMP6700/github/CSSE/softwareprocess/programmingTest.py" />
         <option value="$PROJECT_DIR$/softwareprocess/assignment5Predict.py" />
         <option value="$PROJECT_DIR$/test/NaviTest.py" />
-        <option value="$PROJECT_DIR$/softwareprocess/main dispatch.py" />
         <option value="$PROJECT_DIR$/softwareprocess/Stars.txt" />
         <option value="$PROJECT_DIR$/softwareprocess/test.py" />
         <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/main dispatch.py" />
       </list>
     </option>
   </component>
@@ -168,7 +170,7 @@
       <recent name="C:\Users\yymjz\PycharmProjects\CSSE\softwareprocess" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python tests.Unittest NavigationTest.test200_010_ShouldPredictLongAndLat">
     <configuration default="false" name="Unittests in main dispatch" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -189,23 +191,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="assignment5Predict" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/softwareprocess" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CSSE" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/softwareprocess/assignment5Predict.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="Unittests in NaviTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -262,6 +247,28 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest NavigationTest.test200_010_ShouldPredictLongAndLat" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CSSE" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/NaviTest.py" />
+      <option name="CLASS_NAME" value="NavigationTest" />
+      <option name="METHOD_NAME" value="test200_010_ShouldPredictLongAndLat" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -436,18 +443,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python tests.All Tests (TDD)" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in main dispatch" />
-      <item index="2" class="java.lang.String" itemvalue="Python.assignment5Predict" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in NaviTest" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test" />
-      <item index="5" class="java.lang.String" itemvalue="Python.dispatch" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in NaviTest" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test" />
+      <item index="4" class="java.lang.String" itemvalue="Python.dispatch" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittest NavigationTest.test200_010_ShouldPredictLongAndLat" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest NavigationTest.test200_010_ShouldPredictLongAndLat" />
         <item index="1" class="java.lang.String" itemvalue="Python.dispatch" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in main dispatch" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in NaviTest" />
-        <item index="4" class="java.lang.String" itemvalue="Python.assignment5Predict" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in main dispatch" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in NaviTest" />
       </list>
     </recent_temporary>
   </component>
@@ -476,28 +483,28 @@
     <history-entry file="All_Tests_(TDD) - 2017.04.07 at 01h 50m 38s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_NaviTest - 2017.04.06 at 23h 26m 18s.xml">
-      <configuration name="Unittests in NaviTest" configurationId="tests" />
+    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 01h 56m 29s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_main_dispatch - 2017.04.06 at 23h 27m 15s.xml">
-      <configuration name="Unittests in main dispatch" configurationId="tests" />
+    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 01h 56m 38s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_main_dispatch - 2017.04.06 at 23h 29m 20s.xml">
-      <configuration name="Unittests in main dispatch" configurationId="tests" />
+    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 01h 56m 45s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_main_dispatch - 2017.04.06 at 23h 29m 47s.xml">
-      <configuration name="Unittests in main dispatch" configurationId="tests" />
+    <history-entry file="Unittest_NavigationTest_test200_010_ShouldPredictLongAndLat - 2017.04.07 at 01h 59m 43s.xml">
+      <configuration name="Unittest NavigationTest.test200_010_ShouldPredictLongAndLat" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16648993" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16648993" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34601665" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39357907" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34601665" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39357907" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -847,19 +854,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/main dispatch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/Stars.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/NaviTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="73" column="33" lean-forward="false" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1810">
+          <caret line="235" column="41" lean-forward="false" selection-start-line="235" selection-start-column="41" selection-end-line="235" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -871,23 +890,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/NaviTest.py">
+    <entry file="file://$PROJECT_DIR$/softwareprocess/main dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="78" column="33" lean-forward="true" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3957">
-          <caret line="271" column="0" lean-forward="true" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="81">
+          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

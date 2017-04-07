@@ -133,7 +133,7 @@ def predict(values):
         return values
 
 
-    data = xlrd.open_workbook('201720Assignment5.xls')
+    data = xlrd.open_workbook('C:\Users\yymjz\PycharmProjects\CSSE\softwareprocess\ 201720Assignment5.xls')
     table = open(data.sheet_by_name("Stars"))
     starsDict = {}
     for line in table:
@@ -229,11 +229,11 @@ def calculateGHA(timeParameters):
     totalProgression = dailyRotation * leapYears
     firstDayOfTheYear = datetime.date(year,1,1)
     currentDate = datetime.date(year,month,day)
-    diff = currentDate - firstDayOfTheYear
-    dayGap = int(diff.days)
+    dayDiff = currentDate - firstDayOfTheYear
+    dayGap = int(dayDiff.days)
     time = time.split(':')
-    sec = dayGap * 86400 + int(time[0]) * 3600 + int(time[1]) * 60 + int(time[2])
-    rotationInYear = (sec - int(sec / 86164.1) * 86164.1) / 86164.1 * degreeToFloat('360d0')
+    secGap = dayGap * 86400 + int(time[0]) * 3600 + int(time[1]) * 60 + int(time[2])
+    rotationInYear = (secGap - int(secGap / 86164.1) * 86164.1) / 86164.1 * degreeToFloat('360d00.0')
     GHA = originalGHA + cumulativeProgression + totalProgression + rotationInYear
     GHA = degreeToString(GHA)
     return GHA
