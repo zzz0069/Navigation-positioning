@@ -145,8 +145,8 @@ def predict(values):
         return values
 
 
-    fName = xlrd.open_workbook('201720Assignment5.xls')
-    stars = open(fName)
+    data = xlrd.open_workbook('201720Assignment5.xls')
+    stars = open(data.sheets()[3])
     starsDict = {}
     for line in stars:
         eachLine = line
