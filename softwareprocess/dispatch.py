@@ -135,11 +135,11 @@ def predict(values):
 
     data = open('Stars.txt')
     starsDict = {}
-    for line in data:
+    for line in data.readline():
         eachLine = line
         eachLine = eachLine.split()
         starsDict[eachLine[0]] = str(eachLine[1]) + ' ' + str(eachLine[2])
-    table.close()
+    data.close()
     starName = values['body']
     if starName not in starsDict:
         values['error'] = 'star not in catalog'
