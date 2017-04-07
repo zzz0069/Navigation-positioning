@@ -134,7 +134,7 @@ def predict(values):
 
 
     data = xlrd.open_workbook('C:\Users\yymjz\PycharmProjects\CSSE\softwareprocess\ 201720Assignment5.xls')
-    table = open(data.sheet_by_name("Stars"))
+    table = data.sheet_by_name("Stars")
     starsDict = {}
     for line in table:
         eachLine = line
