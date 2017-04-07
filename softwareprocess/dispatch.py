@@ -135,9 +135,8 @@ def predict(values):
 
     data = open('Stars.txt')
     starsDict = {}
-    for line in data.readline():
-        eachLine = line
-        eachLine = eachLine.split()
+    for line in data:
+        eachLine = line.split()
         starsDict[eachLine[0]] = str(eachLine[1]) + ' ' + str(eachLine[2])
     data.close()
     starName = values['body']
