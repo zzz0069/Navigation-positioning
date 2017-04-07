@@ -24,6 +24,8 @@ def dispatch(values=None):
         values['error'] = 'op is not a legal operation'
         return values
 
+#adjust
+
 def adjust(values):
 
     if 'altitude' in values:
@@ -116,6 +118,10 @@ def correctedAltitude(alt):
 def convertToCelsius(f):
     c = (f - 32) * 5.0/9.0
     return c
+
+
+
+# predict
 
 def predict(values):
     key = 'body'
