@@ -1,7 +1,6 @@
 import math
 import re
 import datetime
-import xlrd
 
 def dispatch(values=None):
 
@@ -136,10 +135,8 @@ def predict(values):
     data = open('Stars.txt')
     starsDict = {}
     for line in data:
-        word = line.split()
-        if (word[0].lower() == data.lower()):
-            return word
-        starsDict[word[0]] = str(word[1]) + ' ' + str(word[2])
+        eachLine = line.split()
+        starsDict[eachLine[0]] = str(eachLine[1]) + ' ' + str(eachLine[2])
     data.close()
     starName = values['body']
     if starName not in starsDict:
