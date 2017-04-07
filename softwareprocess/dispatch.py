@@ -133,7 +133,7 @@ def predict(values):
         return values
 
 
-    data = open('C:\Users\yymjz\PycharmProjects\CSSE/test\Stars.txt')
+    data = open('C:\Users\yymjz\PycharmProjects\CSSE\\test\Stars.txt')
     starsDict = {}
     for line in data:
         eachLine = line.split()
