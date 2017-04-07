@@ -133,7 +133,7 @@ def predict(values):
         return values
 
 
-    data = open('Stars.txt').read()
+    data = open('Stars.txt')
     starsDict = {}
     for line in data:
         eachLine = line.split()
