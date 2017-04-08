@@ -241,7 +241,7 @@ def getGHA(timePara):
     dayGap = int(dayDiff.days)
     time = time.split(':')
     secGap = dayGap * 86400 + int(time[0]) * 3600 + int(time[1]) * 60 + int(time[2])
-    rotationInObsYear = (secGap - int(secGap / 86164.1) * 86164.1) / 86164.1 * degreeToFloat('360d00.0')
+    rotationInObsYear = (secGap - int(secGap / 86164.1) * 86164.1) / 86164.1 * degreeToFloat('360d0.0')
     GHA = originalGHA + cumulativeProgression + totalProgression + rotationInObsYear
     GHA = degreeToString(GHA)
     return GHA
