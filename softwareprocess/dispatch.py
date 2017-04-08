@@ -266,7 +266,7 @@ def degreeToFloat(degree):
     return degree
 
 def degreeToString(degree):
-    minute = str("{:.1f}".format((degree - int(degree)) * 60))
+    minute = str("{:.1f}".format((degree - math.floor(degree)) * 60))
     if '-' in minute:
         minute = minute.replace('-', '')
     minute = minute.split('.')
