@@ -234,6 +234,7 @@ def getGHA(timePara):
     cumulativeProgression = yearGap * degreeToFloat('-0d14.31667')
     leapYears = int(yearGap / 4)
     dailyRotation = degreeToFloat('0d59.0')
+    print dailyRotation
     totalProgression = dailyRotation * leapYears
     firstDayOfTheYear = datetime.date(year,1,1)
     currentDate = datetime.date(year,month,day)
@@ -262,7 +263,7 @@ def degreeToFloat(degree):
     return degree
 
 def degreeToString(degree):
-    minute = str("{:.1f}".format((degree - int(degree)) * 60))
+    minute = str("{:.10f}".format((degree - int(degree)) * 60))
     if '-' in minute:
         minute = minute.replace('-', '')
     minute = minute.split('.')
