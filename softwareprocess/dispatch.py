@@ -192,7 +192,7 @@ def predict(values):
     return values
 
 def dateTest(value):
-    if not re.match("^\d\d\d\d-\d\d-\d\d$", value):
+    if not re.match('\d\d\d\d-\d\d-\d\d$', value):
         return False
     value = value.split('-')
     if int(value[0]) < 2001 or int(value[1]) < 1 or int(value[1]) > 12:
