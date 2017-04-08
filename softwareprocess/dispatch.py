@@ -250,11 +250,11 @@ def getGHA(timePara):
 def degreeToFloat(degree):
     degree = degree.split('d')
     minute = float(degree[1])
-    if float(degree[0]) != 0:
+    if int(degree[0]) != 0:
         if degree[0] < 0:
-            degree = float(degree[0]) - minute / 60
+            degree = int(degree[0]) - minute / 60
         else:
-            degree = float(degree[0]) + minute / 60
+            degree = int(degree[0]) + minute / 60
     else:
         if degree[0][0] == '-':
             degree = - minute / 60
