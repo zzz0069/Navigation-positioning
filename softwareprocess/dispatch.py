@@ -238,7 +238,7 @@ def getGHA(timePara):
     # dailyRotation *= 3
     # temp=dp.degreeToString(c)
     # print temp
-    # (temp=2d57.0, not the correct answer, which is 2d56.9)
+    # (temp=2d57.0, not the correct answer which is 2d56.9)
     totalProgression = dailyRotation * leapYears
     firstDayOfTheYear = datetime.date(year,1,1)
     currentDate = datetime.date(year,month,day)
@@ -261,9 +261,9 @@ def degreeToFloat(degree):
             degree = int(degree[0]) + minute / 60
     else:
         if degree[0][0] == '-':
-            degree = - minute / 60.0
+            degree = - minute / 60
         else:
-            degree = minute / 60.0
+            degree = minute / 60
     return degree
 
 def degreeToString(degree):
@@ -271,7 +271,7 @@ def degreeToString(degree):
     if '-' in minute:
         minute = minute.replace('-', '')
     minute = minute.split('.')
-    min1 = minute[0].zfill(2)
+    min1 = minute[0].zfill(2) #pads string on the left with zeros to fill width
     min2 = minute[1]
     minute = min1 + '.' + min2
     degree = str(int(degree)) + 'd' + minute
