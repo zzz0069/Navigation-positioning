@@ -234,7 +234,10 @@ def getGHA(timePara):
     cumulativeProgression = yearGap * degreeToFloat('-0d14.31667')
     leapYears = int(yearGap / 4)
     dailyRotation = degreeToFloat('0d59.0')
-    print dailyRotation
+    # c=dp.degreeToFloat('0d59.0')
+    # c *= 3
+    # d=dp.degreeToString(c)
+    # print d (d=2.952d57.0, not )
     totalProgression = dailyRotation * leapYears
     firstDayOfTheYear = datetime.date(year,1,1)
     currentDate = datetime.date(year,month,day)
