@@ -260,9 +260,9 @@ def degreeToFloat(degree):
             degree = int(degree[0]) + minute / 60
     else:
         if degree[0][0] == '-':
-            degree = - minute / 60
+            degree = - minute / 60.0
         else:
-            degree = minute / 60
+            degree = minute / 60.0
     return degree
 
 def degreeToString(degree):
