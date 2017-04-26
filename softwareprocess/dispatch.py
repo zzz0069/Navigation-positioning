@@ -277,10 +277,10 @@ def degreeToString(degree):
     degree = str(int(degree)) + 'd' + minute
     return degree
 
+#correct
 def correct(values):
-
+    floatValueOfDegree = {}
     keys = ['lat', 'long', 'altitude', 'assumedLat', 'assumedLong']
-    alternatives = {}
     for key in keys:
         if key not in dict.keys(values):
             values['error'] = 'Mandatory information missing'
@@ -300,17 +300,17 @@ def correct(values):
         if boolVar == False:
             values['error'] = 'invalid ' + key
             return values
-        alternatives[key] = degreeToFloat(value)
-    LHA = alternatives['long'] + alternatives['assumedLong']
-    for key in dict.keys(alternatives):
-        alternatives[key] = math.radians(alternatives[key])
-    intermediateDistance = (math.sin(alternatives['lat']) * math.sin(alternatives['assumedLat'])) + ((math.cos(alternatives['lat'])
-                                                    * math.cos(alternatives['assumedLat']) * math.cos(math.radians(LHA))))
+        floatValueOfDegree[key] = degreeToFloat(value)
+    LHA = floatValueOfDegree['long'] + floatValueOfDegree['assumedLong']
+    for key in dict.keys(floatValueOfDegree):
+        floatValueOfDegree[key] = math.radians(floatValueOfDegree[key])
+    intermediateDistance = (math.sin(floatValueOfDegree['lat']) * math.sin(floatValueOfDegree['assumedLat'])) + ((math.cos(floatValueOfDegree['lat'])
+                                                    * math.cos(floatValueOfDegree['assumedLat']) * math.cos(math.radians(LHA))))
     #print intermediateDistance
     correctedAltitude = math.asin(intermediateDistance)
-    correctedDistance = (alternatives['altitude'] - correctedAltitude)
-    numeratorOfCalcorrectedAzimuth = (math.sin(alternatives['lat']) - (math.sin(alternatives['assumedLat']) * intermediateDistance))
-    denominatorOfCalcorrectedAzimuth = math.cos(alternatives['assumedLat']) * math.cos(math.asin(intermediateDistance))
+    correctedDistance = (floatValueOfDegree['altitude'] - correctedAltitude)
+    numeratorOfCalcorrectedAzimuth = (math.sin(floatValueOfDegree['lat']) - (math.sin(floatValueOfDegree['assumedLat']) * intermediateDistance))
+    denominatorOfCalcorrectedAzimuth = math.cos(floatValueOfDegree['assumedLat']) * math.cos(math.asin(intermediateDistance))
     correctedAzimuth = (math.acos(numeratorOfCalcorrectedAzimuth / denominatorOfCalcorrectedAzimuth)) * 180 / math.pi
     correctedDistance = int(correctedDistance * 180 / math.pi * 60)
     values['correctedDistance'] = str(correctedDistance)
