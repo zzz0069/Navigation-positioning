@@ -302,6 +302,7 @@ def correct(values):
             return values
         floatValueOfDegree[key] = degreeToFloat(value)
     LHA = floatValueOfDegree['long'] + floatValueOfDegree['assumedLong']
+    #print LHA
     for key in dict.keys(floatValueOfDegree):
         floatValueOfDegree[key] = math.radians(floatValueOfDegree[key])
     intermediateDistance = (math.sin(floatValueOfDegree['lat']) * math.sin(floatValueOfDegree['assumedLat'])) + ((math.cos(floatValueOfDegree['lat'])
