@@ -72,7 +72,7 @@ class NavigationTest(unittest.TestCase):
 
     def test200_010_ShouldPredictLongAndLat(self):
         input = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'}
-        output = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long':'75d53.6', 'lat':'7d24.3'}
+        output = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long':'75d53.7', 'lat':'7d24.3'}
         self.assertDictEqual(dp.dispatch(input), output)
 
     def test200_910_ShouldReturnError(self):
