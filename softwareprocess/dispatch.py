@@ -278,7 +278,7 @@ def correct(values):
     keys = ['lat', 'long', 'altitude', 'assumedLat', 'assumedLong']
     for key in keys:
         if key not in dict.keys(values):
-            values['error'] = 'Mandatory information is missing'
+            values['error'] = 'mandatory information is missing'
             return values
         value = values[key]
         if values[key][0] == '-':
