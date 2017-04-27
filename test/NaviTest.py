@@ -119,5 +119,5 @@ class NavigationTest(unittest.TestCase):
 
     def test300_940_ShouldReturnError(self):
         input = {'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-153d38.4', 'assumedLong':' 74d35.3'}
-        output = {'error':'mandatory information is missing', 'op': 'correct'}
+        output = {'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-153d38.4', 'assumedLong':' 74d35.3', 'error':'invalid assumedLat'}
         self.assertDictEqual(dp.dispatch(input), output)
