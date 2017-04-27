@@ -94,3 +94,30 @@ class NavigationTest(unittest.TestCase):
         input = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:99'}
         output = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:99', 'error':'invalid time'}
         self.assertDictEqual(dp.dispatch(input), output)
+
+#correct
+
+    def test300_010_ShouldCorrect(self):
+        input = {'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
+        output = {'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'-3950', 'correctedAzimuth':'164d43.1'}
+        self.assertDictEqual(dp.dispatch(input), output)
+
+    def test300_910_ShouldReturnError(self):
+        input = {'op':'correct'}
+        output = {'error':'mandatory information is missing', 'op': 'correct'}
+        self.assertDictEqual(dp.dispatch(input), output)
+
+    def test300_920_ShouldReturnError(self):
+        input = {'op':'correct', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        output = {'op':'correct', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'error':'mandatory inmformation is missing'}
+        self.assertDictEqual(dp.dispatch(input), output)
+
+    def test300_930_ShouldReturnError(self):
+        input = {'op':'correct', 'lat':'16.0d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        output = {'op':'correct', 'lat':'16.0d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'error':'invalid lat'}
+        self.assertDictEqual(dp.dispatch(input), output)
+
+    def test300_940_ShouldReturnError(self):
+        input = {'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-153d38.4', 'assumedLong':' 74d35.3'}
+        output = {'error':'mandatory information is missing', 'op': 'correct'}
+        self.assertDictEqual(dp.dispatch(input), output)
