@@ -108,8 +108,8 @@ class NavigationTest(unittest.TestCase):
         self.assertDictEqual(dp.dispatch(input), output)
 
     def test300_920_ShouldReturnError(self):
-        input = {'op':'correct', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
-        output = {'op':'correct', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'error':'mandatory inmformation is missing'}
+        input = {'op':'correct', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
+        output = {'op':'correct', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':'74d35.3', 'error':'mandatory inmformation is missing'}
         self.assertDictEqual(dp.dispatch(input), output)
 
     def test300_930_ShouldReturnError(self):
@@ -118,6 +118,6 @@ class NavigationTest(unittest.TestCase):
         self.assertDictEqual(dp.dispatch(input), output)
 
     def test300_940_ShouldReturnError(self):
-        input = {'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-153d38.4', 'assumedLong':' 74d35.3'}
-        output = {'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-153d38.4', 'assumedLong':' 74d35.3', 'error':'invalid assumedLat'}
+        input = {'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-153d38.4', 'assumedLong':'74d35.3'}
+        output = {'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-153d38.4', 'assumedLong':'74d35.3', 'error':'invalid assumedLat'}
         self.assertDictEqual(dp.dispatch(input), output)
