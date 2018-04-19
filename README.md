@@ -1,2 +1,1 @@
-# CSSE
-COMP6700
+Navigation Positioning
